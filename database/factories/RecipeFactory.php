@@ -21,7 +21,7 @@ class RecipeFactory extends Factory
             'slug' => fake()->unique()->slug(),
             'category' => fake()->word(),
             'ingredients' => 'pasta, tomato, olives',
-            'instructions' => fake()->paragraph(5),
+            'instructions' => 'Cuire les pates/ Faire une sauce/ ajouter les olives',
         ];
     }
 }

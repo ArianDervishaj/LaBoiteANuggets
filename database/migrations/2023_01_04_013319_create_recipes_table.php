@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('category');
             $table->string('ingredients');
             $table->longText('instructions');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
