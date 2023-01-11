@@ -1,9 +1,9 @@
 <x-layout>
 
-    <form class="m-5" action="/recipes" method="post" enctype="multipart/form-data">
+    <form class="my-6 mx-5 px-4 py-6 bg-gray-100 rounded-lg grid-cols-1" action="/recipes" method="post" enctype="multipart/form-data">
         @csrf
         <div class="mb-6">
-            <label class="inline-block text-lg mb-2" for="title">Title:</label>
+            <label class="inline-block text-lg mb-3 ml-1 font-semibold" for="title">Nom de la recette :</label>
             <input 
             class="border-2 border-black pl-2 py-1 w-full rounded-lg" 
             type="text" 
@@ -18,7 +18,7 @@
         </div>
 
         <div class="mb-6">
-            <label class="inline-block text-lg mb-2" for="slug">Slug:</label>
+            <label class="inline-block text-lg mb-3 ml-1 font-semibold" for="slug">SLUG :</label>
             <input class="border-2 border-black pl-2 py-1 w-full rounded-lg" 
             type="text" 
             id="slug" 
@@ -32,7 +32,7 @@
         </div>
 
         <div class="mb-6">
-            <label class="inline-block text-lg mb-2" for="ingredients">Ingredients:</label>
+            <label class="inline-block text-lg mb-3 ml-1 font-semibold" for="ingredients">Ingredients :</label>
             <textarea 
             placeholder="Lister tous les ingredients en les séparant par une virgule. Ex : fromage, chocolat, tomates" 
             class="border-2 border-black pl-2 py-2 w-full rounded-lg"
@@ -47,7 +47,7 @@
         </div>
 
         <div class="mb-6">
-            <label class="inline-block text-lg mb-2" for="category">Category:</label>
+            <label class="inline-block text-lg mb-3 ml-1 font-semibold" for="category">Categorie :</label>
             <input 
             class="border-2 border-black pl-2 py-1 w-full rounded-lg" 
             type="text" 
@@ -62,7 +62,7 @@
         </div>
 
         <div class="mb-6">            
-            <label class="inline-block text-lg mb-2" for="instructions">Instructions:</label>
+            <label class="inline-block text-lg mb-3 ml-1 font-semibold" for="instructions">Préparation :</label>
             <textarea 
             class="border-2 border-black pl-2 pt-1 pb-20 w-full rounded-lg" 
             id="instructions" 
@@ -76,7 +76,7 @@
         </div>
 
         <div class="mb-6">
-            <label for="image" class="inline-block text-lg mb-2">Image :</label>
+            <label for="image" class="inline-block text-lg mb-3 ml-1 font-semibold">Image :</label>
             <input name="image" type="file" class="border-2 border-black pl-2 py-2 w-full rounded-lg" >
 
             @error('image')
@@ -84,7 +84,7 @@
             @enderror
         </div>
 
-        <input  class="py-1 px-2 border-2 border-orange-600 text-white bg-orange-400 hover:bg-orange-500 rounded-lg" 
-        type="submit" value="Submit">
+        <input  class="mt-2 py-2 px-6 text-sm text-white bg-black hover:bg-gray-700 rounded-lg"  
+        type="submit" value="ENREGISTRER">
       </form> 
 </x-layout>

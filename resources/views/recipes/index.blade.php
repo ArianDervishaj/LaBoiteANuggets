@@ -1,22 +1,22 @@
 <x-layout>
 
-@include('partials._search')
+    @include('partials._search')
 
-<div class="ml-5 mr-5">
+    <h2 class="text-lg font-semibold ml-2 my-4">{{$heading}}</h2>
+    <hr class="mb-4">
 
-    <h2 class="text-xl font-semibold py-6">{{$heading}}</h2>
-    
-    <div class="grid grid-cols-2 gap-5">
+    <div class="mx-5 mb-5">
         
-        @foreach ($recipes as $recipe)
+        <div class="grid grid-cols-1 gap-5">
+            
+            @foreach ($recipes as $recipe)
 
-        <x-recipe-card :recipe="$recipe"/>
+            <x-recipe-card :recipe="$recipe"/>
+            
+            @endforeach
+
+        </div>
         
-        @endforeach
     </div>
-    
-</div>
-
-<div class="mt-6 p-4">{{$recipes->links()}}</div>
 
 </x-layout>

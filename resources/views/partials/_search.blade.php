@@ -1,16 +1,15 @@
 <form action="/recipes">
-    <div class="flex flex-row m-4">
+    <div class="flex flex-row justify-between bg-gray-800">
         <input 
         type="text" 
         name="search" 
         placeholder="Chercher une recette"
-        class="h-14 pl-3 border-2 border-gray-100 rounded-lg"/>
-        <div>
-            <button
-            type="submit"
-            class="py-4 px-8 bg-orange-400 hover:bg-orange-500 rounded-lg">
-                Chercher
-            </button>
-        </div>
+        class="h-14 pl-3 bg-gray-800 text-white w-full italic focus:outline-none"/>
+
+        <button
+        type="submit"
+        class="py-2 px-6 text-white bg-gray-900 text-lg">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
     </div>
 </form>

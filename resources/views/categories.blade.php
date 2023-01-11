@@ -1,14 +1,15 @@
 <x-layout>
 
 @php
-$categories = DB::table('recipes')->pluck('category')->toArray();
+    $categories = DB::table('recipes')->pluck('category')->toArray();
 @endphp
 
-<div class="ml-5">
+<h3 class="my-4 ml-2 font-semibold text-lg ">Categories</h3>
+<hr class="mb-4">
 
-    <h3 class="font-semibold text-xl mb-7">Categories</h3>
+<div class="mx-5 px-4 mb-4 rounded-lg grid-cols-1">
     
-    <ul class="grid grid-cols-4 gap-5 text-center">
+    <ul class=" text-center">
         
         @foreach($categories as $category)
         
@@ -21,6 +22,5 @@ $categories = DB::table('recipes')->pluck('category')->toArray();
         @endforeach
         
     </ul>
-    
 </div>
 </x-layout>
