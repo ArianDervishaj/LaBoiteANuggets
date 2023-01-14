@@ -10,7 +10,7 @@
     @vite('resources/css/app.css')
     <title>La Boite A Nuggets</title>
 </head>
-<body>
+<body class="bg-zinc-200">
 
     <x-flash-message />
 

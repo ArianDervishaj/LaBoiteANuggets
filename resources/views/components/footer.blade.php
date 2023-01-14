@@ -12,7 +12,6 @@
         <a href="/register" class="text-white text-2xl rounded-lg mr-6">
             <i class="fa-solid fa-user-plus"></i>
         </a>
-
     @endauth
     
 </footer>
