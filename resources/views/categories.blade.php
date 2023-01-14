@@ -4,16 +4,16 @@
     $categories = DB::table('recipes')->pluck('category')->toArray();
 @endphp
 
-<h3 class="my-4 ml-2 font-semibold text-lg ">Categories</h3>
-<hr class="mb-4">
+<h3 class="text-lg font-semibold ml-2 my-4"">Categories</h3>
+<hr class="mb-4 h-1 bg-slate-300">
 
-<div class="mx-5 px-4 mb-4 rounded-lg grid-cols-1">
+<div class="mb-4 rounded-lg h-screen">
     
-    <ul class=" text-center">
+    <ul class=" text-center flex flex-row flex-wrap justify-center">
         
         @foreach($categories as $category)
         
-        <li class="font-semibold text-md">
+        <li class="font-semibold text-lg bg-white rounded-lg py-4 px-4 mx-3 my-3 w-1/3">
             <a href="/recipes/?category={{$category}}">
                 {{$category}}
             </a>
@@ -23,4 +23,6 @@
         
     </ul>
 </div>
+
+
 </x-layout>

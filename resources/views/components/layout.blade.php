@@ -12,13 +12,15 @@
 </head>
 <body class="bg-zinc-200">
 
-    <x-flash-message />
 
+    <x-flash-message />
+        
     <x-header />
     
     {{$slot}}
-
+    
     <x-footer/>
 
+    
 </body>
 </html>
