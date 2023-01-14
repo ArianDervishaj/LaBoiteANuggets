@@ -1,4 +1,4 @@
-<div class="flex flex-row-reverse justify-between w-full items-center bg-black text-white h-20">
+<div class="flex flex-row-reverse justify-between w-full items-center bg-black text-white h-20 md:h-24">
 
     <div class="grid grid-cols-2 items-center">
         

@@ -1,7 +1,12 @@
 <x-layout>
+    <div class="flex items-center justify-center">
 
-    <form class="my-6 mx-5 px-4 py-6 bg-gray-100 rounded-lg grid-cols-1" action="/recipes" method="post" enctype="multipart/form-data">
+    <form class="my-6 mx-5 md:my-12 px-4 md:px-12 py-6 md:py-12 bg-gray-100 rounded-lg grid-cols-1 md:w-1/2" action="/recipes" method="post" enctype="multipart/form-data">
         @csrf
+        <div class="flex items-center justify-center text-center">
+            <h1 class="text-xl font-bold mb-6">Nouvelle recette</h1>
+        </div>
+
         <div class="mb-6">
             <label class="inline-block text-lg mb-3 ml-1 font-semibold" for="title">Nom de la recette :</label>
             <input 
@@ -77,14 +82,15 @@
 
         <div class="mb-6">
             <label for="image" class="inline-block text-lg mb-3 ml-1 font-semibold">Image :</label>
-            <input name="image" type="file" class="border-2 border-black pl-2 py-2 w-full rounded-lg" >
+            <input name="image" type="file" class="border-2 border-black pl-2 py-2 w-full rounded-lg bg-white" >
 
             @error('image')
             <p class="text-red-500 text-xs mt-1">{{$message}}</p>
             @enderror
         </div>
 
-        <input  class="mt-2 py-2 px-6 text-sm text-white bg-black hover:bg-gray-700 rounded-lg"  
+        <input  class="mt-2 py-2 px-6 text-sm md:text-base text-white bg-black hover:bg-gray-700 rounded-lg"  
         type="submit" value="ENREGISTRER">
       </form> 
+    </div>
 </x-layout>

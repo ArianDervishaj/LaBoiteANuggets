@@ -1,4 +1,4 @@
-<footer class="flex justify-between w-full items-center font-bold bg-black text-white h-20">
+<footer class="flex justify-between w-full items-center font-bold bg-black text-white h-20 md:h-24">
     
     @auth
         <a href="/recipes/create"
@@ -6,7 +6,7 @@
             <i class="fa-solid fa-square-plus"></i>
         </a>
     @endauth
-        <p class="text-white text-sm mx-auto">Arian Dervishaj ®</p>
+        <p class="text-white text-sm mx-auto md:text-lg">Arian Dervishaj ®</p>
 
     @auth
         <a href="/register" class="text-white text-2xl rounded-lg mr-6">

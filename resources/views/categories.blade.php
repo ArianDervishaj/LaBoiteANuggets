@@ -4,7 +4,7 @@
     $categories = DB::table('recipes')->pluck('category')->toArray();
 @endphp
 
-<h3 class="text-lg font-semibold ml-2 my-4"">Categories</h3>
+<h2 class="text-lg md:text-xl font-semibold ml-2 md:ml-4 my-4 md:my-6">Categories</h2>
 <hr class="mb-4 h-1 bg-slate-300">
 
 <div class="mb-4 rounded-lg h-screen">

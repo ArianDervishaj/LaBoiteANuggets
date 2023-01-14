@@ -14,7 +14,6 @@ class RecipeController extends Controller
         request('category');
 
         return view('recipes.index', [
-            'heading' => 'All Recipes',
             'recipes' => Recipe::latest()->filter(request(['category', 'search']))->paginate(10)
         ]);
     }
@@ -23,10 +22,11 @@ class RecipeController extends Controller
     public function show(String $slug) {
 
         $recipe = Recipe::find($slug);
-
+        $showIngredients = true;
         if($recipe){
             return view('recipes.show', [
-                'recipe' => $recipe
+                'recipe' => $recipe,
+                'showIngredients' => $showIngredients,
             ]);
         }else{
             abort('404');

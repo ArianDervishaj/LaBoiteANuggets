@@ -1,10 +1,13 @@
 <x-layout>
 
-    <h3 class="my-4 ml-2 font-semibold text-lg">Connexion</h3>
-    <hr>
-
-    <form class="my-6 mx-5 px-4 py-6 bg-gray-100 rounded-lg grid-cols-1" action="/users/authenticate" method="post">
+    <div class="flex items-center justify-center">
+    <form class="my-6 mx-5 md:my-12 px-4 md:px-12 py-6 md:py-12 bg-gray-100 rounded-lg grid-cols-1 md:w-1/3" action="/users/authenticate" method="post">
         @csrf
+
+            <h1 class="text-xl font-bold mb-6">
+                Connexion
+            </h1>
+
         <div class="mb-6">
             <label class="inline-block text-lg mb-3 ml-1 font-semibold" for="title">Email :</label>
             <input 
@@ -34,5 +37,5 @@
         <input  class="mt-2 py-2 px-6 text-sm text-white bg-black hover:bg-gray-700 rounded-lg" 
         type="submit" value="SE CONNECTER">
     </form> 
-
+    </div>
 </x-layout>
