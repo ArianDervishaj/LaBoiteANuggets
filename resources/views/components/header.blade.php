@@ -17,10 +17,10 @@
             <button class="flex items-center rounded text-white text-2xl" @click="menuOpen = !menuOpen">
                 <i class="fa-solid fa-bars"></i>
             </button>
-            <ul class="absolute top-0 right-7 text-white bg-black opacity-80 rounded-lg" x-show="menuOpen" x-cloak>
-                <li><a href="/recipes" class="block py-2 px-3" x-cloak>Home</a></li>
-                <li><a href="/recipes" class="block py-2 px-3" x-cloak>Recettes</a></li>
-                <li><a href="/categories" class="block py-2 px-3" x-cloak>Categories</a></li>
+            <ul class="absolute top-0 right-7 text-white bg-black opacity-80 rounded-lg md:text-3xl" x-show="menuOpen" x-cloak>
+                <li><a href="/recipes" class="block py-2 px-3 md:py-4 md:px-6" x-cloak>Accueil</a></li>
+                <li><a href="/recipes" class="block py-2 px-3 md:py-4 md:px-6" x-cloak>Recettes</a></li>
+                <li><a href="/categories" class="block py-2 px-3 md:py-4 md:px-6" x-cloak>Categories</a></li>
             </ul>
         </div>
 
