@@ -2,7 +2,7 @@
 
 
 
-    <div class="w-full h-[34rem] h-[24rem] relative overflow-hidden">
+    <div class="w-full md:h-[34rem] h-[24rem] relative overflow-hidden">
         <a href="/recipes/{{$recipe->slug}}">
             
             
