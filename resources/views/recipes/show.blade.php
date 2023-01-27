@@ -13,7 +13,7 @@ $listeInstruction = Str::of($recipe->instructions)->explode('/ ');
     
     <div class="h-[34rem] md:w-1/2 md:h-[50rem] md:ml-10">
     
-        <img class="h-[34rem] md:h-[50rem] bg-gray-200 w-full" 
+        <img class="h-[34rem] md:h-[50rem] object-cover bg-gray-200 w-full" 
         src="{{$recipe->image ? asset('storage/' . $recipe->image) : asset('images/no-image.jpg')}}" 
         alt="{{$recipe->title}}">
         
