@@ -6,7 +6,7 @@
         <a href="/recipes/{{$recipe->slug}}">
             
             
-            <img class=" object-cover h-5/6 mx-auto rounded-t-xl hover:scale-110 transition-transform duration-500"
+            <img class="w-full object-cover h-5/6 mx-auto rounded-t-xl hover:scale-110 transition-transform duration-500"
             src="{{$recipe->image ? asset('storage/' . $recipe->image) : asset('images/no-image.jpg')}}" 
             alt="{{$recipe->title}}">
             
