@@ -20,8 +20,10 @@ jobs:
           tools: 'composer'
 
       - name: 📦 Install Composer dependencies
-        run: composer install --no-dev --prefer-dist --optimize-autoloader --ignore-platform-reqs
-      
+        run: |
+          curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+          php composer.phar install --no-dev --prefer-dist --optimize-autoloader --ignore-platform-reqs
+          
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
