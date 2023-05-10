@@ -18,11 +18,13 @@ jobs:
         with:
           php-version: '8.1'
           tools: 'composer'
-
+          
       - name: 📦 Install Composer dependencies
         run: |
-          curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-          php composer.phar install --no-dev --prefer-dist --optimize-autoloader --ignore-platform-reqs
+          curl -sS https://getcomposer.org/installer -o composer-setup.php
+          php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+          php /usr/local/bin/composer install --no-dev --prefer-dist --optimize-autoloader --ignore-platform-reqs
+          rm composer-setup.php
           
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
