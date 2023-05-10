@@ -1,0 +1,26 @@
+name: Deploy to Infomaniak
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: 📦 Install Composer dependencies
+        run: composer install --no-dev --prefer-dist --optimize-autoloader
+      
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ${{ secrets.INFOMANIAK_FTP_SERVER }}
+          username: ${{ secrets.INFOMANIAK_FTP_USERNAME }}
+          password: ${{ secrets.INFOMANIAK_FTP_PASSWORD }}
+          local-dir: ./public/
+          server-dir: ./sites/laboiteanuggets.ch/
